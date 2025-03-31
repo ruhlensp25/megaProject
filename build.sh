@@ -49,7 +49,7 @@ find ~/libs/libgl-dev -name "gl.h"
 echo '^ that should also be a file'
 #End Zach edits
 
-cd ~
+cd ~/megaProject
 # Use this to build box2d on any system with a bash shell
 rm -rf build
 mkdir build
