@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+PROJECT_DIR=$(pwd)
+
 #Zach edits:
 mkdir -p ~/libs
 cd ~/libs
@@ -49,7 +51,8 @@ find ~/libs/libgl-dev -name "gl.h"
 echo '^ that should also be a file'
 #End Zach edits
 
-cd ~/megaProject
+cd "$PROJECT_DIR"
+
 # Use this to build box2d on any system with a bash shell
 rm -rf build
 mkdir build
