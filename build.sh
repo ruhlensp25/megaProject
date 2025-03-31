@@ -1,14 +1,5 @@
 #!/usr/bin/env bash
 
-# Use this to build box2d on any system with a bash shell
-rm -rf build
-mkdir build
-cd build
-
-# I haven't been able to get Wayland working on WSL but X11 works.
-# https://www.glfw.org/docs/latest/compile.html
-
-
 #Zach edits:
 mkdir -p ~/libs
 cd ~/libs
@@ -57,6 +48,17 @@ export LD_LIBRARY_PATH=$HOME/libs/libgl-dev/usr/lib:$LD_LIBRARY_PATH
 find ~/libs/libgl-dev -name "gl.h"
 echo '^ that should also be a file'
 #End Zach edits
+
+# Use this to build box2d on any system with a bash shell
+rm -rf build
+mkdir build
+cd build
+
+# I haven't been able to get Wayland working on WSL but X11 works.
+# https://www.glfw.org/docs/latest/compile.html
+
+
+
 
 
 
