@@ -13,6 +13,7 @@
 #include "box2d/base.h"
 #include "box2d/box2d.h"
 #include "box2d/math_functions.h"
+#include <iostream>
 
 // clang-format off
 #include "glad/glad.h"
@@ -714,6 +715,7 @@ int main( int, char** )
 		if ( g_draw.m_showUI )
 		{
 			float fps = 1.0f / frameTime;
+			std::cout << "FPS: " << fps << std::endl;
 			snprintf( buffer, 128, "%.0f ms (%.0f FPS) - step %d - camera (%g, %g, %g)", 1000.0f * frameTime, fps, s_sample->m_stepCount,
 					  g_camera.m_center.x, g_camera.m_center.y, g_camera.m_zoom );
 			// snprintf( buffer, 128, "%.1f ms", 1000.0f * frameTime );
@@ -753,7 +755,7 @@ int main( int, char** )
 
 		// Limit frame rate to 60Hz
 		double time2 = glfwGetTime();
-		double targetTime = time1 + 1.0 / 60.0;
+		double targetTime = time1 + 1.0 / 120.0;
 		while ( time2 < targetTime )
 		{
 			b2Yield();
