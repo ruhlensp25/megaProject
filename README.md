@@ -1,3 +1,16 @@
+# CS470 Parallel and Distributed Systems Final Project
+## Stephen Ruhlen, Zachary Putz, Jaden Cioffi, Eli Moore
+
+### Steps to build / run:
+- run build.sh
+- to run samples: ./build/bin/samples
+- under the 'tools' control pane, select 'benchmarks' and 'barrel'
+- benchmark runs automatically, 'R' to reset, 'P' to pause
+- set 'substeps' and 'hertz' sliders to maximum
+- open Linux Mint's built-in 'System Monitor' software and inspect 'Resources' -> CPU percentages during runtime
+- switch between 'workers' slider set to different numbers (1 and 24 used for lab machine testing)
+
+
 ![Box2D Logo](https://box2d.org/images/logo.svg)
 
 # Build Status
