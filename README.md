@@ -9,6 +9,8 @@
 - set 'substeps' and 'hertz' sliders to maximum
 - open Linux Mint's built-in 'System Monitor' software and inspect 'Resources' -> CPU percentages during runtime
 - switch between 'workers' slider set to different numbers (1 and 24 used for lab machine testing)
+- *New Addition*: observe the fps counter in the bottom-right of the GUI during runtime
+- *New Addition*: use ./build/bin/samples > <filename.txt> to redirect stdout fps values to file for capture
 
 
 ![Box2D Logo](https://box2d.org/images/logo.svg)
