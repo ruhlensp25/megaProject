@@ -12,6 +12,7 @@
 - *New Addition*: observe the fps counter in the bottom-left of the GUI during runtime
 - *New Addition*: use ./build/bin/samples > <filename.txt> to redirect stdout fps values to file for capture
 - *New Addition*: take the file generated from the above command and run python3 gen_graph.py <filename.txt> to view a graph of fps
+-     Note: for best graphical results, Pause immediately, set hertz to 30, substeps at maximum, and workers below 5, then restart and play. This allows for a large enough dip in performance to be viewable
 
 
 ![Box2D Logo](https://box2d.org/images/logo.svg)
