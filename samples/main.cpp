@@ -640,6 +640,8 @@ int main( int, char** )
 	glClearColor( 0.2f, 0.2f, 0.2f, 1.0f );
 
 	float frameTime = 0.0;
+	int timeInt = 0;
+
 
 	while ( !glfwWindowShouldClose( g_mainWindow ) )
 	{
@@ -715,7 +717,23 @@ int main( int, char** )
 		if ( g_draw.m_showUI )
 		{
 			float fps = 1.0f / frameTime;
-			std::cout << "FPS: " << fps << std::endl;
+			// auto now = std::chrono::high_resolution_clock::now();
+			// auto elapsed = std::chrono::duration_cast<std::chrono::seconds>(now-start);
+			// if (elapsed.count() >= 1) {
+			// 	// std::cout << "" << timeInt << ": "<< fps << std::endl;
+			// 	start = now;
+			// 	timeInt += 1;
+			// }
+			int stepsPerPrint = int(s_settings.hertz / 5);
+
+			if (s_sample->m_stepCount % stepsPerPrint == 0)
+			{
+				std::cout << "Step: " << s_sample->m_stepCount
+						<< ", FPS: " << fps << std::endl;
+						
+			}
+			// float fps = 1.0f / frameTime;
+			// std::cout << "" << fps << std::endl;
 			snprintf( buffer, 128, "%.0f ms (%.0f FPS) - step %d - camera (%g, %g, %g)", 1000.0f * frameTime, fps, s_sample->m_stepCount,
 					  g_camera.m_center.x, g_camera.m_center.y, g_camera.m_zoom );
 			// snprintf( buffer, 128, "%.1f ms", 1000.0f * frameTime );
@@ -755,7 +773,7 @@ int main( int, char** )
 
 		// Limit frame rate to 60Hz
 		double time2 = glfwGetTime();
-		double targetTime = time1 + 1.0 / 120.0;
+		double targetTime = time1 + 1.0 / 60.0;
 		while ( time2 < targetTime )
 		{
 			b2Yield();
