@@ -11,6 +11,7 @@
 - switch between 'workers' slider set to different numbers (1 and 24 used for lab machine testing)
 - *New Addition*: observe the fps counter in the bottom-left of the GUI during runtime
 - *New Addition*: use ./build/bin/samples > <filename.txt> to redirect stdout fps values to file for capture
+- *New Addition*: take the file generated from the above command and run python3 gen_graph.py <filename.txt> to view a graph of fps
 
 
 ![Box2D Logo](https://box2d.org/images/logo.svg)
