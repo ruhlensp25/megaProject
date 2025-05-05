@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt
-
+import sys
 steps = []
 fps_values = []
 
 # Read data from file
-with open('fps_log.txt', 'r') as f:
+with open(sys.argv[1], 'r') as f:
     for line in f:
         if "Step" in line and "FPS" in line:
             parts = line.strip().split(',')

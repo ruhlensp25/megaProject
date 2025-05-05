@@ -1,0 +1,4 @@
+GL 4.6
+OpenGL 4.6 (Core Profile) Mesa 24.0.9-0ubuntu0.3, GLSL 4.60
+Step: 12, FPS: 59.9998
+Step: 22, FPS: 59.9999
